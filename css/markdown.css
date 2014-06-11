@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+background-color:#222;
+color:#999999;
+line-height:180%;
+font-size:1em;
+/*text-align:justify;
+text-justify:inter-word;*/
+}
+
+
+.readable{
+	width:542px;
+/* 	text-align:justify; */
+	margin-left: auto;
+	margin-right: auto;
+	height: 865px!important;
+}
+
+.textkontroll{
+	visibility: visible;
+	display: inherit;
+}
+
+/*kontrollerade meningar som rullar fint*/
+.foretagsnamn{
+	color:#0CF!important;
+}
+.foretagsbeskrivning{
+	color:#ca0;
+}
+.nuvarandepositionering{
+	color:#F60;
+}
+.malsattning{
+	color:#3b6;
+}
+.malsattninggenomforande{
+	color:#63F;
+}
+
+.malsattningresultat{
+	color:#F00;
+}
+
+.usp{
+	color:#3CC;
+}
+
+.prekarnvarde{
+	color:#f95;
+}
+
+.karnvarde1,
+.karnvarde2,
+.karnvarde3{
+	color:#caF;
+}
+
+.postkarnvarde{
+	color:#903;
+}
+
+
+.malgrupp{
+	color:#FC6;
+}
+
+.malgrupppersona{
+	color:#6C3;
+}
+
+.malgrupperfarenhet{
+	color:#0Cf;
+}
+
+
+.malgruppstyrka{
+	color:#F06;
+}
+	
+
+.malgruppsvaghet{
+	color:#c5F;
+}
+
+.malgruppkunskap{
+	color:#6326a0;
+}
+
+.preonskaduppfattning{
+	color:#f282e2;
+}
+
+.onskaduppfattning{
+	color:#0d8115;
+}
+
+.preuppdrag{
+	color:#f1de0d;
+}
+
+.uppdrag{
+	color:#F60;
+}
+
+.tillvagagangssatt{
+	color:#e939ba;
+}
+
+.problematisering{
+	color:#39bde9;
+}
+
+.postproblematisering{
+	color:#f34951;
+}
+
+/*meningar som ev. behövs ses över*/
+.random-sentence-ch0{
+	color:#F63;
+}
+
+.exforetagsnamn{
+	color:#0CF;
+}
+
+.exforetagsbeskrivning{
+	color:#ca0;
+}
+
+.exmalsattning{
+	color:#3b6;
+}
+
+.prekansla{
+	color:#4bd425;
+}
+
+.kansla1{
+	color: #d5913f;
+}
+
+.kansla2{
+	color: #4bfdd0;
+}
+
+
+
+
+

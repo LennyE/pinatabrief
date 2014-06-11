@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+background-color:#efefef;
+color:#646464;
+line-height:180%;
+font-size:1em;
+/*text-align:justify;
+text-justify:inter-word;*/
+}
+
+
+.readable{
+	width:542px;
+/* 	text-align:justify; */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.textkontroll{
+	visibility: hidden;
+	display: none;
+}

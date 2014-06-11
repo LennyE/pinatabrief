@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Pi&ntilde;atabrief - proof of concept by Lenny Ekberg</title>
+  	
+	<!-- jquery -->
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>  
+	    
+	<!-- slumpscript och ord --> 
+	<script src="jquery/slumpord.js"></script>
+	
+	<!-- stilmallar --> 
+	<script src="jquery/alter_stylesheet.js"></script>
+	    
+	<link href="css/style.css" rel="stylesheet" type="text/css" id="stl" />
+	
+</head>
+<body>
+
+<span style="position:fixed">
+    <button id="vaxlaBtn">Växla CSS [v]</button>
+	<button class="rndButton">Slumpa Brief [r]</button>
+</span>
+
+<br>
+
+<div class="readable">
+
+	<h3>Piñatabrief</h3>
+
+    	<h4>Bakgrund</h4>
+            <span class="foretagsbeskrivning"></span>. <span class="nuvarandepositionering"></span>. <span class="malsattning"></span> <span class="malsattninggenomforande">,</span> <span class="malsattningresultat"></span>.            
+            <span class="usp"></span>. <span class="prekarnvarde"></span>, <span class="karnvarde1"></span>, <span class="karnvarde2"></span> &amp; <span class="karnvarde3"></span> <span class="postkarnvarde"></span>.
+            
+    	<h4>Målgrupp</h4>
+            <span class="malgrupp"></span> <span class="malgrupppersona"></span> &ndash; <span class="malgrupperfarenhet"></span>. <span class="malgruppkunskap"></span>, <span class="preonskaduppfattning"></span> <span class="onskaduppfattning"></span>.
+            
+    	<h4>Uppdrag</h4>
+            <span class="preuppdrag"></span> <span class="uppdrag"></span>. <span class="tillvagagangssatt"></span>,
+            <span class="prekansla"></span> <span class="kansla1"></span> och <span class="kansla2"></span>.
+            <span class="problematisering"></span>. <span class="postproblematisering"></span>?
+
+<br><br><br>
+
+</div>
+
+
+<!-- test av slumpmeningar vid alternativ stilmall -->
+
+<div class="limitwidth textkontroll">
+<hr>
+<br>
+    <h5>Skriv en kort brief, men gör det bra.</h5>
+
+    <ol>
+    	<h4>Bakgrund - beskriv bakgrunden till brief</h4>
+        <h5>Företagsfakta (oftast bra flow i detta stycke, kort om företaget och hur de ser sig själva samt vad de tror sig behöva för att nå en ny målsättning)</h5>
+            <!--test <span class="test"></span><br>-->
+    
+            <li>Företagsnamn <span class="foretagsnamn"></span></li>
+            
+            <li>Företagsbeskrivning (bundet till Bransch) <span class="foretagsbeskrivning"></span>.</li>
+           
+            <li>Positionering <span class="nuvarandepositionering"></span></li>
+                  
+            <li>Målsättning <span class="malsattning"></span></li>
+            
+            <li>Målsättning, genomförande <span class="malsattninggenomforande"></span></li>
+            
+            <li>Målsättning, resultat <span class="malsattningresultat"></span></li>
+            
+            <li>USP (alt. slogan) <span class="usp"></span></li>
+            
+            <li>Pre-Kärnvärde <span class="prekarnvarde"></span></li>
+            
+            <li>(Nuvarande) Kärnvärden <span class="karnvarde1"></span>, <span class="karnvarde2"></span> &amp; <span class="karnvarde3"></span></li>
+            
+            <li>Post-Kärnvärde <span class="postkarnvarde"></span></li>
+            
+        <h5>Kunder/Målgrupp - ger en överblick av marknaden (känns relativt stabil, möjligen lite fattig på matnyttig info?)</h5>
+
+            <li>Målgrupp <span class="malgrupp"></span></li>
+
+            <li>Målgrupp-Persona <span class="malgrupppersona"></span> &ndash;</li>
+
+            <li>Målgrupp-Erfarenhet <span class="malgrupperfarenhet"></span>.</li>
+            
+            <li>Kunskap om målgrupp (antingen styrka eller svaghet) <span class="malgruppkunskap"></span>,</li>
+            
+            <li>Pre-Önskad uppfattning1 <span class="preonskaduppfattning"></span></li>
+
+            <li>Önskad uppfattning <span class="onskaduppfattning"></span></li>.
+            
+    	<h4>Problem</h4>
+        <h5>Uppdraget</h5>
+            
+            <li>Pre-Uppdrag <span class="preuppdrag"></span></li>
+
+            <li>Uppdrag (bundet till Bransch) <span class="uppdrag"></span></li>
+
+            <li>Tillvägagångssätt <span class="tillvagagangssatt"></span></li>
+            
+            <li>Pre-Känsla <span class="prekansla"></span></li>
+
+            <li>Känsla 1<span class="kansla1"></span></li>
+
+            <li>Känsla 2<span class="kansla2"></span></li>
+            
+            <li>Problematisering <span class="problematisering"></span></li>
+            
+	        <li>Post-problematisering <span class="postproblematisering"></span>?</li>
+            
+            <li>Vad ska hända när någon tagit del av produktionen? <span class=""></span></li>
+
+	        <h4>Frågeställningar & förutsättningar</h4>
+
+            <li>Eventuella uppmaningar eller restriktioner som måste följas <span class=""></span></li>
+
+    </ol>            
+
+
+
+
+<br><hr><br>
+
+
+<ul> Sliders som indikerar hur resultatet ska kännas
+<li>Seriöst / Lekfullt</li>
+<li>Elegant / Uttrycksfullt</li>
+<li>Traditionellt / Modernt</li>
+<li>Personligt / Professionellt</li>
+<li>Femenint / Maskulint</li>
+<li>Färgstarkt / Återhållsamt</li>
+<li>Billigt / Exklusivt</li>
+</ul>
+            
+<a target="_blank" href="http://www.berghs.se/arbetsprov/grafisk-design">berghs, arbetsprov grafisk design brief '14</a><br>
+
+<a target="_blank" href="http://fillthegapmarketing.co.uk/academy/resources/a-great-design-brief-template/">http://fillthegapmarketing.co.uk/academy/resources/a-great-design-brief-template/</a><br>
+  
+Does this piñatabrief seem too insane? Clients really do be mad, but please contact us if things get out of hand here.
+
+</div>
+
+</body>
+
+
+</html>
