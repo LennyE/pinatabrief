@@ -15,19 +15,209 @@ $namn = array(
 	'Woophf',
 	'NorthWest Hillside',
 	'Mogart',
-	'Bogbox'
+	'Bogbox',
+'Widgetify',
+'Warehousing',
+'The Demo Company',
+'Foo Bars',
+'Vikingtelli',
+'Fake Brothers',
+'Allied Biscuit',
+'Ankh-Sto Associates',
+'Extensive Enterprise',
+'Galaxy Corp',
+'Globo-Chem',
+'Mr. Sparkle',
+'Globex Corporation',
+'LexCorp',
+'LuthorCorp',
+'North Central Positronics',
+'Omni Consimer Products',
+'Praxis Corporation',
+'Sombra Corporation',
+'Sto Plains Holdings',
+'Tessier-Ashpool',
+'Wayne Enterprises',
+'Wentworth Industries',
+'ZiffCorp',
+'Bluth Company',
+'Strickland Propane',
+'Thatherton Fuels',
+'Three Waters',
+'Water and Power',
+'Western Gas & Electric',
+'Mammoth Pictures',
+'Mooby Corp',
+'Gringotts',
+'Thrift Bank',
+'Flowers By Irene',
+'The Legitimate Businessmens Club',
+'Osato Chemicals',
+'Transworld Consortium',
+'Universal Export',
+'United Fried Chicken',
+'Virtucon',
+'Kumatsu Motors',
+'Keedsler Motors',
+'Powell Motors',
+'Industrial Automation',
+'Sirius Cybernetics Corporation',
+'U.S. Robotics and Mechanical Men',
+'Colonial Movers',
+'Corellian Engineering Corporation',
+'Incom Corporation',
+'General Products',
+'Leeding Engines Ltd.',
+'Blammo',
+'Input, Inc.',
+'Mainway Toys',
+'Videlectrix',
+'Zevo Toys',
+'Ajax',
+'Axis Chemical Co.',
+'Barrytron',
+'Carrys Candles',
+'Cogswell Cogs',
+'Spacely Sprockets',
+'General Forge and Foundry',
+'Duff Brewing Company',
+'Dunder Mifflin',
+'General Services Corporation',
+'Monarch Playing Card Co.',
+'Krustyco',
+'Initech',
+'Roboto Industries',
+'Primatech',
+'Sonky Rubber Goods',
+'St. Anky Beer',
+'Stay Puft Corporation',
+'Vandelay Industries',
+'Wernham Hogg',
+'Gadgetron',
+'Burleigh and Stronginthearm',
+'BLAND Corporation',
+'Nordyne Defense Dynamics',
+'Petrox Oil Company',
+'Roxxon',
+'McMahon and Tate',
+'Sixty Second Avenue',
+'Charles Townsend Agency',
+'Spade and Archer',
+'Megadodo Publications',
+'Rouster and Sideways',
+'C.H. Lavatory and Sons',
+'Globo Gym American Corp',
+'The New Firm',
+'SpringShield',
+'Compuglobalhypermeganet',
+'Data Systems',
+'Gizmonic Institute',
+'Initrode',
+'Taggart Transcontinental',
+'Atlantic Northern',
+'Niagular',
+'Plow King',
+'Big Kahuna Burger',
+'Big T Burgers and Fries',
+'Chez Quis',
+'Chotchkies',
+'The Frying Dutchman',
+'Klimpys',
+'The Krusty Krab',
+'Monks Diner',
+'Milliways',
+'Minuteman Cafe',
+'Taco Grande',
+'Tip Top Cafe',
+'Moes Tavern',
+'Central Perk',
+'Chasers'
 );
-
 $foretagsnamn = $namn[array_rand($namn)];
 
 
+//////////
+
+
+
+$foretagskategori = array(
+	'Tidningar',
+	'Musik'
+);
+$rnd_foretagskategori = $foretagskategori[array_rand($foretagskategori)];
+
+if ($rnd_foretagskategori == Tidningar) {
+			$foretagsbeskrivining = array(
+			'Tidn. '.$foretagsnamn.' distrubuerar morgontidningar i västra Blekinge',
+			'Tidn. '.$foretagsnamn.' trycker upp högkvalitativa livsstilsmagasin',
+			'Tidn. '.$foretagsnamn.' konverterar gammelmedia till digitalt format'
+		);
+		$rnd_foretagsbeskrivning = $foretagsbeskrivining[array_rand($foretagsbeskrivining)];
+	
+}
+elseif ($rnd_foretagskategori == Musik) {
+			$foretagsbeskrivining = array(
+			'Musik '.$foretagsnamn.' marknadsför nya artister i den digitala marknaden', //GÄLLER FÖR ALLA I MUSIKKATEGORIN; vilken genre handlar det om (går att applicera på samtliga branscher)
+			'Musik '.$foretagsnamn.' är en global konsertarrangör',
+			'Musik '.$foretagsnamn.' trycker vinylskivor åt undergroundartister'
+		);
+		$rnd_foretagsbeskrivning = $foretagsbeskrivining[array_rand($foretagsbeskrivining)];
+}
+
+/* pseudo-kod
+	
+1. slumpa bransh/kategori (tidningar, musiker, klädesmärken, biltilverkare etc.)
+2. kolla om det finns ett valt yrke (designer, utvecklare, copywriter, ), annars slumpa ett
+3. leverera uppdrag beroende på bransh/kategori OCH valt yrke
+	
+	if bransh/kategori = klädesmärken {
+		if yrke = designer {
+		
+		}
+		else if {
+		
+		}
+		
+	}
+	else if yrkeskategori = musiker{
+		use array of "musikeruppdrag"
+	}
+	else {
+		use random yrkeskategori from array of yrken
+	}
+
+
+	
+
+
+
+	///////////
+	if bransh/kategori = designer {
+		use array of "designeruppdrag"
+	}
+	else if yrkeskategori = musiker{
+		use array of "musikeruppdrag"
+	}
+	else {
+		use random yrkeskategori from array of yrken
+	}
+	///////////
+	
+	
+	
+	
+*/
+
+
 	////////  Företagsbeskrivning  ////////
+/*
 		$foretagsbeskrivining_tidningar = array(
 			'Tidn. '.$foretagsnamn.' distrubuerar morgontidningar i västra Blekinge',
 			'Tidn. '.$foretagsnamn.' trycker upp högkvalitativa livsstilsmagasin',
 			'Tidn. '.$foretagsnamn.' konverterar gammelmedia till digitalt format'
 		);
 		$rnd_foretagsbeskrivning_tidningar = $foretagsbeskrivining_tidningar[array_rand($foretagsbeskrivining_tidningar)];
+*/
 
 /*
 		$foretagsbeskrivining_musik = array(
@@ -293,40 +483,45 @@ $postProblematisering = array(
 $rnd_postProblematisering = $postProblematisering[array_rand($postProblematisering)];
 
 
-
+	echo ($rnd_foretagskategori);
+	echo ('<br>');
+	echo ($rnd_foretagsbeskrivning.'. ');	
+	echo ('<hr>');
+	
+	
 	echo ('<h3>Piñatabrief</h3>');
 	echo ('<h4>Bakgrund</h4>');
-	echo ($rnd_foretagsbeskrivning_tidningar.'. ');	
-	echo ($rnd_nuvarandePositionering.'. ');
-	echo ($rnd_malsattning.' ');
-	echo ($rnd_malsattningGenomforande.' ');
-	echo ($rnd_malsattningResultat.'. ');
-	echo ($rnd_usp.'. ');
-	echo ($rnd_preKarnvarde.' ');
-	echo ($rnd_karnvarde1.', ');
-	echo ($rnd_karnvarde2.' och ');
-	echo ($rnd_karnvarde3.' ');
-	echo ($rnd_postKarnvarde.'.');
+	echo ('<span class="foretagsbeskrivning">');		echo ($rnd_foretagsbeskrivning.'. ');		echo ('</span>');	
+	echo ('<span class="nuvarandepositionering">');		echo ($rnd_nuvarandePositionering.'. ');	echo ('</span>');
+	echo ('<span class="malsattning">');				echo ($rnd_malsattning.' ');				echo ('</span>');
+	echo ('<span class="malsattninggenomforande">');	echo ($rnd_malsattningGenomforande.' ');	echo ('</span>');
+	echo ('<span class="malsattningresultat">');		echo ($rnd_malsattningResultat.'. ');		echo ('</span>');
+	echo ('<span class="usp">');						echo ($rnd_usp.'. ');						echo ('</span>');
+	echo ('<span class="prekarnvarde">');				echo ($rnd_preKarnvarde.' ');				echo ('</span>');
+	echo ('<span class="karnvarde1">');					echo ($rnd_karnvarde1.', ');				echo ('</span>');
+	echo ('<span class="karnvarde2">');					echo ($rnd_karnvarde2.' och ');				echo ('</span>');
+	echo ('<span class="karnvarde3">');					echo ($rnd_karnvarde3.' ');					echo ('</span>');
+	echo ('<span class="postkarnvarde">');				echo ($rnd_postKarnvarde.'.');				echo ('</span>');
 
 
 	echo ('<h4>Målgrupp</h4>');
-	echo ($rnd_malgrupp.' ');
-	echo ($rnd_malgruppPersona.' &ndash; ');
-	echo ($rnd_malgruppErfarenhet.'. ');
-	echo ($rnd_malgruppKunskap.', ');
-	echo ($rnd_preOnskadUppfattning.' ');
-	echo ($rnd_onskadUppfattning.'.');
+	echo ('<span class="malgrupp">');					echo ($rnd_malgrupp.' ');					echo ('</span>');
+	echo ('<span class="malgrupppersona">');			echo ($rnd_malgruppPersona.' &ndash; ');	echo ('</span>');
+	echo ('<span class="malgrupperfarenhet">');			echo ($rnd_malgruppErfarenhet.'. ');		echo ('</span>');
+	echo ('<span class="malgruppkunskap">');			echo ($rnd_malgruppKunskap.', ');			echo ('</span>');
+	echo ('<span class="preonskaduppfattning">');		echo ($rnd_preOnskadUppfattning.' ');		echo ('</span>');
+	echo ('<span class="onskaduppfattning">');			echo ($rnd_onskadUppfattning.'.');			echo ('</span>');
 	
 	
 	echo ('<h4>Uppdrag</h4>');
-	echo ($rnd_preUppdrag.' ');
-	echo ($rnd_uppdrag_tidningar.'. ');
-	echo ($rnd_tillvagagangssatt.'. ');
-	echo ($rnd_preKansla .' ');
-	echo ($rnd_kansla1.' ');
-	echo ($rnd_kansla2.'. ');
-	echo ($rnd_problematisering.'. ');
-	echo ($rnd_postProblematisering.'.');
+	echo ('<span class="preuppdrag">');					echo ($rnd_preUppdrag.' ');					echo ('</span>');
+	echo ('<span class="uppdrag">');				echo ($rnd_uppdrag_tidningar.'. ');			echo ('</span>');
+	echo ('<span class="tillvagagangssatt">');			echo ($rnd_tillvagagangssatt.'. ');			echo ('</span>');
+	echo ('<span class="prekansla">');					echo ($rnd_preKansla .' ');					echo ('</span>');
+	echo ('<span class="kansla1">');					echo ($rnd_kansla1.' ');					echo ('</span>');
+	echo ('<span class="kansla2">');					echo ($rnd_kansla2.'. ');					echo ('</span>');
+	echo ('<span class="problematisering">');			echo ($rnd_problematisering.'. ');			echo ('</span>');
+	echo ('<span class="postproblematisering">');		echo ($rnd_postProblematisering.'.');		echo ('</span>');
 	
 
 ?>

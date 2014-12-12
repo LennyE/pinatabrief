@@ -16,7 +16,7 @@ text-justify:inter-word;*/
 	margin-left: auto;
 	margin-right: auto;
 /* 	height: 865px!important; */
-	margin-bottom: 60px;
+	padding-bottom: 60px;
 }
 
 .textkontroll{
@@ -77,6 +77,7 @@ text-justify:inter-word;*/
 }
 
 
+/*
 .malgruppstyrka{
 	color:#F06;
 }
@@ -85,6 +86,7 @@ text-justify:inter-word;*/
 .malgruppsvaghet{
 	color:#c5F;
 }
+*/
 
 .malgruppkunskap{
 	color:#6326a0;
@@ -110,15 +112,8 @@ text-justify:inter-word;*/
 	color:#e939ba;
 }
 
-.problematisering{
-	color:#39bde9;
-}
 
-.postproblematisering{
-	color:#f34951;
-}
-
-/*meningar som ev. behövs ses över*/
+/*
 .random-sentence-ch0{
 	color:#F63;
 }
@@ -134,6 +129,7 @@ text-justify:inter-word;*/
 .exmalsattning{
 	color:#3b6;
 }
+*/
 
 .prekansla{
 	color:#4bd425;
@@ -145,6 +141,14 @@ text-justify:inter-word;*/
 
 .kansla2{
 	color: #4bfdd0;
+}
+
+.problematisering{
+	color:#39bde9;
+}
+
+.postproblematisering{
+	color:#f34951;
 }
 
 
