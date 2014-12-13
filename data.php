@@ -209,7 +209,7 @@ elseif ($rnd_foretagskategori == Musik) {
 */
 
 
-	////////  Företagsbeskrivning  ////////
+	////////  Företagsbeskrivning .old ////////
 /*
 		$foretagsbeskrivining_tidningar = array(
 			'Tidn. '.$foretagsnamn.' distrubuerar morgontidningar i västra Blekinge',
@@ -483,10 +483,16 @@ $postProblematisering = array(
 $rnd_postProblematisering = $postProblematisering[array_rand($postProblematisering)];
 
 
-	echo ($rnd_foretagskategori);
-	echo ('<br>');
-	echo ($rnd_foretagsbeskrivning.'. ');	
-	echo ('<hr>');
+/*test*/
+echo 'category : '.$_GET['yrke'];
+echo ('<hr>');
+
+
+echo ($rnd_foretagskategori);
+echo ('<br>');
+echo ($rnd_foretagsbeskrivning.'. ');	
+echo ('<hr>');
+	
 	
 	
 	echo ('<h3>Piñatabrief</h3>');
