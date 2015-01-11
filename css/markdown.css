@@ -24,6 +24,11 @@ text-justify:inter-word;*/
 	display: inherit;
 }
 
+.bold{
+	font-weight: bold;
+	color: #ff5804
+}
+
 /*kontrollerade meningar som rullar fint*/
 .foretagsnamn{
 	color:#0CF!important;

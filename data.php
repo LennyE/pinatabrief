@@ -1,5 +1,28 @@
 <?php
 
+/* if no yrke is selected, randomize one of all available yrken on load. else use selected yrke */
+$yrke = $_GET['yrke'];
+
+
+if ($yrke == ""){
+	$yrken = array(
+		'designer',
+		'illustrator',
+		'utvecklare'
+	);
+	$yrke = $yrken[array_rand($yrken)];
+	
+	echo ('<span class="bold">Slumpad</span> yrkeskategori: '.$yrke);
+	echo ('<br>');
+}
+else{
+	echo ('<span class="bold">Vald</span> yrkeskategori: '.$yrke);
+}
+
+echo ('<hr>');
+
+
+
 ////////  Bakgrund  ////////
 $namn = array(
 	'Sandgoat',
@@ -136,7 +159,20 @@ $namn = array(
 $foretagsnamn = $namn[array_rand($namn)];
 
 
-//////////
+
+	///////////
+	/*
+		if bransh/kategori = designer {
+			use array of "designeruppdrag"
+		}
+		else if yrkeskategori = musiker{
+			use array of "musikeruppdrag"
+		}
+		else {
+			use random yrkeskategori from array of yrken
+		}
+	*/
+	///////////
 
 
 
@@ -411,25 +447,65 @@ $rnd_preUppdrag = $preUppdrag[array_rand($preUppdrag)];
 
 
 
-	////////  Uppdragsbeskrivning  ////////
-		$uppdrag_tidningar = array(
-			'(Tidn) ta fram en ny grafisk profil åt ett magasin som '.$foretagsnamn.' ska lansera',
-			'(Tidn) introducera fler människor till de tjänster '.$foretagsnamn.' erbjuder genom en digital reklamkampanj',
-			'(Tidn) tillsammans med '.$foretagsnamn.' ta fram och producera en reklamkampanj för den nya biltidningen Drive',
-			'(Tidn) layouta ett magasin med en tonalitet anpassad för målgruppen'
+	////////  Uppdragsbeskrivning – "om företagskategori är "denna" => välj lämpligt uppdrag efter valt/slumpat yrke  ////////
+if ($rnd_foretagskategori == Tidningar) {
+	if ($yrke == designer) {
+		$uppdrag = array(
+			'(Tidn, design) ta fram en ny grafisk profil åt ett magasin som '.$foretagsnamn.' ska lansera',
+			'(Tidn, design) introducera fler människor till de tjänster '.$foretagsnamn.' erbjuder genom en digital reklamkampanj',
+			'(Tidn, design) tillsammans med '.$foretagsnamn.' ta fram och producera en reklamkampanj för den nya biltidningen Drive',
+			'(Tidn, design) layouta ett magasin med en tonalitet anpassad för målgruppen'
 			/* 	uppdragen måste vara lagom abstrakta, inte för begränsande men ändå erbjuda vissa ramar	 */
+		);	
+	}
+	elseif ($yrke == illustrator) {
+		$uppdrag = array(
+			'(Tidn, illustratör) illustrera ett collage med bilmodeller från 80-talet i en tidsenlig form. Illustrationen ska vara anpassad för tryck',
+			'(Tidn, illustratör) ta fram grafiskt exempelmaterial till tidningens nya seriestrip, vilket inkluderar karaktärsdesign och övergripande tonalitet',
+			'(Tidn, illustratör) teckna nya redaktions och byline-bilder i en sammanhängande grafisk helhet. '.$foretagsnamn.' önskar också att bilderna speglar realism över karikatyr',
 		);
-		$rnd_uppdrag_tidningar = $uppdrag_tidningar[array_rand($uppdrag_tidningar)];
+	
+	}
+	elseif ($yrke == utvecklare) {
+		$uppdrag = array(
+			'(Tidn, utvecklare) utveckla en ny webbplatform för '.$foretagsnamn.' där de kan sprida viralt material',
+			'(Tidn, utvecklare) bygga ett interaktiv bildgalleri där  '.$foretagsnamn.' kan presentera sitt bildmaterial',
+			'(Tidn, utvecklare) i enighet med '.$foretagsnamn.'s värdeord ta fram och producera en ny, responsivt anpassad, digital närvaro',
+		);	
+	}
+	$rnd_uppdrag = $uppdrag[array_rand($uppdrag)];
+}
 
-
-/*
-		$uppdrag_musik = array(
-			'(Musik) ta fram ett albumomslag åt '.$foretagsnamn.' som ska fungera i både analoga och digitala sammanhang',
-			'(Musik) ta fram en serie affischer åt '.$foretagsnamn.' för att promota sina artister', //var stöter man på affischerna? hur ska de användas?
-			'(Musik) arbeta fram ett koncept för en webbutik där artister hos '.$foretagsnamn.' kan sälja sin musik',
-			'(Musik) producera en grafisk profil som knyter samman '.$foretagsnamn.'s värderingar och mål med målgruppens intressen'
+elseif ($rnd_foretagskategori == Musik) {
+	if ($yrke == designer) {
+		$uppdrag = array(
+			'(Musik, designer) ta fram ett albumomslag åt '.$foretagsnamn.' som ska fungera i både analoga och digitala sammanhang',
+			'(Musik, designer) ta fram en serie affischer åt '.$foretagsnamn.' för att promota sina artister', //var stöter man på affischerna? hur ska de användas?
+			'(Musik, designer) arbeta fram ett koncept för en webbutik där artister hos '.$foretagsnamn.' kan sälja sin musik',
+			'(Musik, designer) producera en grafisk profil som knyter samman '.$foretagsnamn.'s värderingar och mål med målgruppens intressen'
 		);
-*/
+	}
+
+	elseif ($yrke == illustrator) {
+		$uppdrag = array(
+			'(Musik, illustratör) ta fram ett albumomslag åt '.$foretagsnamn.' som ska fungera i både analoga och digitala sammanhang',
+			'(Musik, illustratör) ta fram en serie affischer åt '.$foretagsnamn.' för att promota sina artister', //var stöter man på affischerna? hur ska de användas?
+			'(Musik, illustratör) arbeta fram ett koncept för en webbutik där artister hos '.$foretagsnamn.' kan sälja sin musik',
+			'(Musik, illustratör) producera en grafisk profil som knyter samman '.$foretagsnamn.'s värderingar och mål med målgruppens intressen'
+		);
+	}
+
+	elseif ($yrke == utvecklare) {
+		$uppdrag = array(
+			'(Musik, utvecklare) ta fram ett albumomslag åt '.$foretagsnamn.' som ska fungera i både analoga och digitala sammanhang',
+			'(Musik, utvecklare) ta fram en serie affischer åt '.$foretagsnamn.' för att promota sina artister', //var stöter man på affischerna? hur ska de användas?
+			'(Musik, utvecklare) arbeta fram ett koncept för en webbutik där artister hos '.$foretagsnamn.' kan sälja sin musik',
+			'(Musik, utvecklare) producera en grafisk profil som knyter samman '.$foretagsnamn.'s värderingar och mål med målgruppens intressen'
+		);
+	}
+	$rnd_uppdrag = $uppdrag[array_rand($uppdrag)];
+}
+
 
 $tillvagagangssatt = array(
 	'Dramatisera kring idén och på vilket sätt budskapet enklast sprids',
@@ -457,7 +533,7 @@ $rnd_kansla1 = $kansla1[array_rand($kansla1)];
 $kansla2 = array(
 	'men framförallt maskulint',
 	'och vardagligt',
-	'och fult',
+	'men får inte upplevas som skrikigt',
 	'och uppiggande',
 	'men inte tråkigt'
 );
@@ -483,17 +559,26 @@ $postProblematisering = array(
 $rnd_postProblematisering = $postProblematisering[array_rand($postProblematisering)];
 
 
+
+
 /*test*/
-echo 'category : '.$_GET['yrke'];
-echo ('<hr>');
-
-
-echo ($rnd_foretagskategori);
+/*
+echo ('Yrkeskategori: '.$yrke);
 echo ('<br>');
-echo ($rnd_foretagsbeskrivning.'. ');	
+*/
+
+echo ('Företagskategori: '.$rnd_foretagskategori);
+echo ('<hr>');
+
+echo ('Företagsbeskrivning: '.$rnd_foretagsbeskrivning.'. ');	
+echo ('<hr>');
+
+echo ('Anpassat uppdrag: '.$rnd_uppdrag.'.');	
+echo ('<hr>');
 echo ('<hr>');
 	
-	
+
+
 	
 	echo ('<h3>Piñatabrief</h3>');
 	echo ('<h4>Bakgrund</h4>');
@@ -521,13 +606,13 @@ echo ('<hr>');
 	
 	echo ('<h4>Uppdrag</h4>');
 	echo ('<span class="preuppdrag">');					echo ($rnd_preUppdrag.' ');					echo ('</span>');
-	echo ('<span class="uppdrag">');				echo ($rnd_uppdrag_tidningar.'. ');			echo ('</span>');
+	echo ('<span class="uppdrag">');					echo ($rnd_uppdrag.'. ');					echo ('</span>');
 	echo ('<span class="tillvagagangssatt">');			echo ($rnd_tillvagagangssatt.'. ');			echo ('</span>');
 	echo ('<span class="prekansla">');					echo ($rnd_preKansla .' ');					echo ('</span>');
 	echo ('<span class="kansla1">');					echo ($rnd_kansla1.' ');					echo ('</span>');
 	echo ('<span class="kansla2">');					echo ($rnd_kansla2.'. ');					echo ('</span>');
 	echo ('<span class="problematisering">');			echo ($rnd_problematisering.'. ');			echo ('</span>');
-	echo ('<span class="postproblematisering">');		echo ($rnd_postProblematisering.'.');		echo ('</span>');
+	echo ('<span class="postproblematisering">');		echo ($rnd_postProblematisering.'?');		echo ('</span>');
 	
 
 ?>

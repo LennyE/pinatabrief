@@ -22,3 +22,7 @@ text-justify:inter-word;*/
 	visibility: hidden;
 	display: none;
 }
+
+.bold{
+	font-weight: bold;
+}
